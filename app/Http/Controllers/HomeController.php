@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +28,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        return view('app');
     }
 
     /**

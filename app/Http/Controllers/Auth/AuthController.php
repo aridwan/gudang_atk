@@ -29,7 +29,7 @@ class AuthController extends Controller
      * @return void
      */
 
-    protected $redirectPath = '/home';
+    protected $redirectPath = '/app';
 
     public function __construct()
     {

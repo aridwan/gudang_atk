@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/app', function(){
+    return 'hello';
+} );
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
