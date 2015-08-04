@@ -37,7 +37,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./">TRUSTLINE</a>
+                <a class="navbar-brand" href="./">Gudang ATK</a>
                 <!--<img src="c:\xampp\htdocs\trustline\trustline\resources\assets\image">-->
 
             </div>
@@ -132,8 +132,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::guest())
-                        <li>{!!link_to('auth/login', 'Login')!!}</li>
-                        <li>{!!link_to('auth/register', 'Register')!!}</li>
+
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
