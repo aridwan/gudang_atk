@@ -11,7 +11,8 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Silahkan Login</div>
                     <div class="panel-body">
-                        {!! Form::open(['url' => 'auth/login', 'class' => 'form-horizontal']) !!}
+                        {!! Form::open(['url' => '/auth/login', 'class' => 'form-horizontal', 'method' => 'post']) !!}
+                        {!! csrf_field() !!}
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="form-group">

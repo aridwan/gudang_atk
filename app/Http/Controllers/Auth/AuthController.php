@@ -29,7 +29,6 @@ class AuthController extends Controller
      * @return void
      */
 
-    protected $redirectPath = '/app';
 
     public function __construct()
     {
