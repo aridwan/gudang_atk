@@ -9,10 +9,11 @@
     </title>
 
     {!! HTML::style('css/bootstrap.min.css') !!}
-    {!! HTML::style('css/jasny-bootstrap.css') !!}
-    {!! HTML::style('css/jquery-ui.structure.min.css') !!}
-    {!! HTML::style('css/jquery-ui.theme.min.css') !!}
-    {!! HTML::style('css/jquery.appendGrid-1.5.2.css') !!}
+    {!! HTML::style('css/bootstrap.css') !!}
+    {!! HTML::style('css/bootswatch.min.css') !!}
+    {{--{!! HTML::style('css/jquery-ui.structure.min.css') !!}--}}
+    {{--{!! HTML::style('css/jquery-ui.theme.min.css') !!}--}}
+    {{--{!! HTML::style('css/jquery.appendGrid-1.5.2.css') !!}--}}
     @yield('css')
     {!! HTML::style('css/my-style.css') !!}
 
@@ -107,7 +108,8 @@
     <!-- Scripts -->
     {!! HTML::script('js/jquery.min.js') !!}
     {!! HTML::script('js/bootstrap.min.js') !!}
-    {!! HTML::script('js/jasny-bootstrap.min.js') !!}
+    {!! HTML::script('js/bootswatch.min.js') !!}
+    {!! HTML::script('js/bootswatch.js') !!}
 
     {!! HTML::script('js/jquery-1.11.1.min.js') !!}
     {!! HTML::script('js/jquery-ui-1.11.1.min.js') !!}

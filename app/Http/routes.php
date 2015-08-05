@@ -19,6 +19,17 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('barang/index', 'BarangController@index');
     Route::get('barang/create', 'BarangController@create');
     Route::post('barang/store', 'BarangController@store');
+    Route::get('barang/destroy/{id}', 'BarangController@destroy');
+    Route::get('barang/edit/{id}', 'BarangController@edit');
+    Route::post('barang/update/{id}', 'BarangController@update');
+
+    Route::get('anggota/index', 'AnggotaController@index');
+    Route::get('anggota/create', 'AnggotaController@create');
+    Route::post('anggota/store', 'AnggotaController@store');
+    Route::get('anggota/destroy/{id}', 'AnggotaController@destroy');
+    Route::get('anggota/edit/{id}', 'AnggotaController@edit');
+    Route::post('anggota/update/{id}', 'AnggotaController@update');
+
 });
 
 // Authentication routes...

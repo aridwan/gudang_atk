@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Anggota;
 use Illuminate\Http\Request;
 
-use App\Barang;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class BarangController extends Controller
+class AnggotaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,14 +17,13 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $data = Barang::get([
-            'id',
+        $data = Anggota::get([
+            'NIP',
             'nama',
-            'kuantitas',
-            'keterangan'
+            'jabatan'
         ])->toArray();
         //return view('pre', compact('data'));
-        return view('barang.index', compact('data'));
+        return view('anggota.index', compact('data'));
     }
 
     /**
@@ -34,7 +33,7 @@ class BarangController extends Controller
      */
     public function create()
     {
-        return view('barang.create');
+        return view('anggota.create');
     }
 
     /**
@@ -46,9 +45,9 @@ class BarangController extends Controller
     public function store(Request $request)
     {
         $fill = $request->all();
-        Barang::create($fill);
+        Anggota::create($fill);
         //dd($fill);
-        return redirect()->action('BarangController@index');
+        return redirect()->action('AnggotaController@index');
     }
 
     /**
@@ -59,7 +58,7 @@ class BarangController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -70,8 +69,8 @@ class BarangController extends Controller
      */
     public function edit($id)
     {
-        $data = Barang::find($id);
-        return view('barang.edit', compact('data'));
+        $data = Anggota::find($id);
+        return view('anggota.edit', compact('data'));
     }
 
     /**
@@ -85,8 +84,8 @@ class BarangController extends Controller
     {
         $fill = $request->all();
 //        dd($fill);
-        Barang::find($id)->update($fill);
-        return redirect()->action('BarangController@index');
+        Anggota::find($id)->update($fill);
+        return redirect()->action('AnggotaController@index');
     }
 
     /**
@@ -97,8 +96,8 @@ class BarangController extends Controller
      */
     public function destroy($id)
     {
-        $barang = Barang::find($id);
-        $barang->delete();
-        return redirect()->action('BarangController@index');
+        $anggota = Anggota::find($id);
+        $anggota->delete();
+        return redirect()->action('AnggotaController@index');
     }
 }
