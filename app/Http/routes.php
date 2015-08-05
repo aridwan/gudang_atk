@@ -14,6 +14,11 @@
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 
+// route yang butuh authentication
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('barang/index', 'BarangController@index');
+});
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');

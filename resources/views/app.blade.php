@@ -37,7 +37,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./">Gudang ATK</a>
+                <a class="navbar-brand" href="./"><!--<span><img src="http://localhost:8000/images/index.jpg"></span>--> Gudang ATK</a>
                 <!--<img src="c:\xampp\htdocs\trustline\trustline\resources\assets\image">-->
 
             </div>
@@ -49,33 +49,20 @@
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                Persiapan<span class="caret"></span>
+                                Data Barang<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li>{!!link_to('#', 'Data Mata Uang')!!}</li>
-                                <li>{!!link_to('perusahaan', 'Data Info Perusahaan')!!}</li>
-                                <li>{!!link_to('akun', 'Data Akun')!!}</li>
-                                <li>{!!link_to('tipeakun', 'Tipe Akun')!!}</li>
-                                <li>{!!link_to('#', 'Set Akun Default Mata Uang')!!}</li>
-                                <li>{!!link_to('syaratpembayaran', 'Data Syarat Pembayaran')!!}</li>
-                                <li>{!!link_to('pajak', 'Data Pajak')!!}</li>
-                                <li>{!!link_to('customer', 'Data Pelanggan')!!}</li>
-                                <li>{!!link_to('supplier', 'Data Pemasok')!!}</li>
-                                <li>{!!link_to('#', 'Data Proyek')!!}</li>
-                                {{--<li>{!!link_to('syaratPembayaran', 'Data Syarat Pembayaran')!!}</li>--}}
-                                <li>{!!link_to('#', 'Data Departemen')!!}</li>
-                                <li>{!!link_to('gudang', 'Data Gudang')!!}</li>
-                                <li>{!!link_to('#', 'Set Akun Default Gudang')!!}</li>
-                                <li>{!!link_to('barang', 'Data Barang')!!}</li>
-                                <li>{!!link_to('saldo', 'Multi Saldo Awal')!!}</li>
-                                <li>{!!link_to('batch', 'Batch')!!}</li>
-                                <li>{!!link_to('#', 'Aktiva Tetap')!!}</li>
-                                <li>{!!link_to('karyawan', 'Kepegawaian')!!}</li>
-                                <li>{!!link_to('jabatan', 'Jabatan')!!}</li>
-                                <li>{!!link_to('sales', 'Data Sales')!!}</li>
-                                <li>{!!link_to('#', 'Neraca Percobaan')!!}</li>
-
-
+                                <li>{!!link_to('barang/index', 'List')!!}</li>
+                                <li>{!!link_to('barang/create', 'Tambah')!!}</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Data Anggota<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>{!!link_to('anggota/index', 'List')!!}</li>
+                                <li>{!!link_to('anggota/create', 'Tambah')!!}</li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -83,46 +70,10 @@
                                 Aktivitas<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li>{!!link_to('pembelian/pr/create', 'Permintaan Barang')!!}</li>
-                                <li>{!!link_to('pembelian/po/create', 'Pesanan Pembelian')!!}</li>
-                                <li>{!!link_to('pembelian/ro/create', 'Penerimaan Barang')!!}</li>
-                                <li>{!!link_to('pembelian/pi/create', 'Faktur Pembelian')!!}</li>
-                                <li>{!!link_to('pembelian/pt/create', 'Retur Pembelian')!!}</li>
+                                <li>{!!link_to('aktivitas/pesanan', 'Pesanan Barang')!!}</li>
+                                <li>{!!link_to('aktivitas/pengadaan', 'Pengadaan Barang')!!}</li>
+                                <li>{!!link_to('aktivitas/register', 'Register')!!}</li>
 
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                Laporan<span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>{!!link_to('#', 'Laporan Keuangan')!!}</li>
-                                <li>{!!link_to('#', 'Buku Besar')!!}</li>
-                                <li>{!!link_to('#', 'Kas & Bank')!!}</li>
-                                <li>{!!link_to('#', 'Akun Piutang & Pemasok')!!}</li>
-                                <li>{!!link_to('#', 'Laporan Pembelian')!!}</li>
-                                <li>{!!link_to('#', 'Pembiayaan Pesanan')!!}</li>
-                                <li>{!!link_to('#', 'Aktiva Tetap')!!}</li>
-                                <li>{!!link_to('#', 'Persediaan')!!}</li>
-                                <li>{!!link_to('#', 'Gudang')!!}</li>
-                                <li>{!!link_to('#', 'Laporan Proyek')!!}</li>
-                                <li>{!!link_to('#', 'Laporan Departemen')!!}</li>
-                                <li>{!!link_to('#', 'Laporan Pemeriksaan')!!}</li>
-                                <li>{!!link_to('#', 'Laporan Lain-lain')!!}</li>
-                                <li>{!!link_to('#', 'Laporan Tersimpan...')!!}</li>
-                                <li>{!!link_to('#', 'Laporan Terdesain...')!!}</li>
-
-                            </ul>
-                        </li>
-
-
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                Bantuan<span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>{!!link_to('#', 'Back Up')!!}</li>
-                                <li>{!!link_to('#', 'Restore')!!}</li>
                             </ul>
                         </li>
 

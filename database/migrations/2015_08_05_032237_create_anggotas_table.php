@@ -12,12 +12,10 @@ class CreateAnggotasTable extends Migration
      */
     public function up()
     {
-        Schema::create('anggotas', function(Blueprint $table){
-            $table->integer('id');
-            $table->string('nip');
-            $table->string('nama');
+        Schema::create('anggotas', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
         });
-
     }
 
     /**
@@ -27,6 +25,6 @@ class CreateAnggotasTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('anggotas');
     }
 }
