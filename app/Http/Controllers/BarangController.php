@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Barang;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +17,14 @@ class BarangController extends Controller
      */
     public function index()
     {
-        //
+        $data = Barang::get([
+            'id',
+            'nama',
+            'kuantitas',
+            'keterangan'
+        ])->toArray();
+        //return view('pre', compact('data'));
+        return view('barang.index', compact('data'));
     }
 
     /**
@@ -26,7 +34,7 @@ class BarangController extends Controller
      */
     public function create()
     {
-        //
+        return view('barang.create');
     }
 
     /**
@@ -37,7 +45,10 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fill = $request->all();
+        Barang::create($fill);
+        //dd($fill);
+        return redirect('barang/index');
     }
 
     /**
