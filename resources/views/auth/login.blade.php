@@ -11,12 +11,12 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Silahkan Login</div>
                     <div class="panel-body">
-                        {!! Form::open(['url' => '/auth/login', 'class' => 'form-horizontal', 'method' => 'post']) !!}
+                        {!! Form::open(['url' => 'auth', 'class' => 'form-horizontal', 'method' => 'post']) !!}
                         {!! csrf_field() !!}
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label">Username</label>
+                            <label class="col-md-4 control-label">Name</label>
                             <div class="col-md-6">
                                 <input type="name" class="form-control" name="name" value="{{ old('name') }}">
                             </div>

@@ -9,6 +9,7 @@ return array(
     'CreateAnggotasTable' => $baseDir . '/database/migrations/2015_08_05_032237_create_anggotas_table.php',
     'CreateBarangsTable' => $baseDir . '/database/migrations/2015_08_05_030656_create_barangs_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreatePesanansTable' => $baseDir . '/database/migrations/2015_08_06_040537_create_pesanans_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',

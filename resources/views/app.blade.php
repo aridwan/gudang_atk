@@ -71,9 +71,9 @@
                                 Aktivitas<span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li>{!!link_to('aktivitas/pesanan', 'Pesanan Barang')!!}</li>
-                                <li>{!!link_to('aktivitas/pengadaan', 'Pengadaan Barang')!!}</li>
-                                <li>{!!link_to('aktivitas/register', 'Register')!!}</li>
+                                <li>{!!link_to('pesanan/index', 'Pesanan Barang')!!}</li>
+                                <li>{!!link_to('pengadaan/index', 'Pengadaan Barang')!!}</li>
+                                <li>{!!link_to('register/index', 'Register')!!}</li>
 
                             </ul>
                         </li>

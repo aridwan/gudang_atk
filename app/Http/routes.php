@@ -30,7 +30,18 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('anggota/edit/{id}', 'AnggotaController@edit');
     Route::post('anggota/update/{id}', 'AnggotaController@update');
 
+    Route::get('pesanan/index', 'PesananController@index');
+    Route::get('pesanan/create', 'PesananController@create');
+    Route::post('pesanan/store', 'PesananController@store');
+    Route::get('pesanan/destroy/{id}', 'PesananController@destroy');
+    Route::get('pesanan/edit/{id}', 'PesananController@edit');
+    Route::post('pesanan/update/{id}', 'PesananController@update');
+
 });
+
+//Custom Auth
+Route::get('auth', 'CustomAuthController@index');
+Route::post('auth', 'CustomAuthController@authenticate');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');

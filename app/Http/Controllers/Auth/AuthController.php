@@ -29,7 +29,7 @@ class AuthController extends Controller
      * @return void
      */
 
-    protected $loginPath = '/';
+    //protected $loginPath = '/';
 
     public function __construct()
     {
